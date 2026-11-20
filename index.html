@@ -20,7 +20,7 @@ header,main{max-width:1400px;margin:0 auto;padding:16px 24px 0}h1{font-size:22px
 .meter{height:6px;background:var(--line);border-radius:3px;margin-top:5px;overflow:hidden}.meter i{display:block;height:100%;background:var(--acc)}
 ul.tight{margin:6px 0 0;padding-left:18px}ul.tight li{margin:4px 0}.ok{color:var(--ok)}.bad{color:var(--bad)}
 .tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right;white-space:nowrap}
-th:nth-child(-n+4),td:nth-child(-n+4){text-align:left}th{color:var(--mute);font-weight:600;font-size:12px}
+th:nth-child(-n+4),td:nth-child(-n+4){text-align:left}.dimt td:last-child{text-align:right}th{color:var(--mute);font-weight:600;font-size:12px}
 .verdict{font-size:16px;padding:10px 14px;border-radius:8px;background:color-mix(in srgb,var(--bad) 10%,transparent);border-left:4px solid var(--bad);margin-bottom:12px}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
@@ -36,12 +36,14 @@ th:nth-child(-n+4),td:nth-child(-n+4){text-align:left}th{color:var(--mute);font-
 <label><input type="checkbox" data-k="3180932" checked><span class="sw" style="background:#d9963a"></span>SLIM3 30 RS ID</label>
 <label><input type="checkbox" data-k="4012084" checked><span class="sw" style="background:#2e9d6a"></span>AN3 350 MT ID</label>
 <label><input type="checkbox" data-k="4012081" checked><span class="sw" style="background:#3f7cc0"></span>AN3 350 ID</label>
+<label><input type="checkbox" id="dimToggle" checked><span class="sw" style="background:#e11d48"></span>Kích thước</label>
 </div></div>
 <div class="step"><button id="play" class="btn">▶ Xếp từng bước</button><input type="range" id="stepR" min="0" max="1" value="1"><span id="stepT" class="note" style="min-width:210px"></span></div>
 <p class="note">Kéo để xoay, cuộn để zoom. Vách đầu cont bên trái, cửa cont bên phải.</p>
 </div><div>
 <div class="kpis" id="kpis"></div>
-<h2>Sơ đồ xếp theo đoạn</h2><ul class="tight"><li><b>Đoạn 1</b> (x = 0–972 cm, dài 972,0 cm): 5 tầng SLIM3 nằm + 1 tầng AN3 đứng trên cùng (48,5 dọc cont, 5 thùng × 42 ngang). Cao 258,0 cm · 295 SLIM3 + 100 AN3 chỗ</li><li><b>Đoạn 2</b> (x = 972–1.069 cm, dài 97,0 cm): 4 tầng AN3 đứng (48,5 dọc cont, 5 thùng × 42 ngang) + 1 tầng SLIM3 nằm trên cùng. Cao 262,5 cm · 5 SLIM3 + 40 AN3 chỗ</li><li><b>Đoạn 3</b> (x = 1.069–1.197 cm, dài 128,0 cm): 6 tầng SLIM3 nằm. Cao 243,0 cm · 42 SLIM3 + 0 AN3 chỗ</li></ul>
+<h2>Kích thước khối hàng</h2><div class="tbl"><table class="dimt"><tbody><tr><td>Lòng cont (D × R × C)</td><td>1.200 × 230 × 270 cm</td></tr><tr><td>Khối hàng (D × R × C max)</td><td>1.190,5 × 211,9 × 262,5 cm</td></tr><tr><td>Trống phía cửa</td><td>9,5 cm</td></tr><tr><td>Khe mỗi bên vách</td><td>~9,0 cm</td></tr><tr><td>Đoạn 1</td><td>dài 972,0 · cao 258,0 cm</td></tr><tr><td>Đoạn 2</td><td>dài 97,0 · cao 262,5 cm</td></tr><tr><td>Đoạn 3</td><td>dài 128,0 · cao 243,0 cm</td></tr><tr><td>Thùng SLIM3 30 RS ID</td><td>85,7 × 40,5 × 40,5 cm</td></tr><tr><td>Thùng AN3 30 R 350 MT ID</td><td>48,5 × 42,0 × 55,5 cm</td></tr><tr><td>Thùng AN3 30 R 350 ID</td><td>48,5 × 42,0 × 55,5 cm</td></tr></tbody></table></div>
+<h2 style="margin-top:12px">Sơ đồ xếp theo đoạn</h2><ul class="tight"><li><b>Đoạn 1</b> (x = 0–972 cm, dài 972,0 cm): 5 tầng SLIM3 nằm + 1 tầng AN3 đứng trên cùng (48,5 dọc cont, 5 thùng × 42 ngang). Cao 258,0 cm · 295 SLIM3 + 100 AN3 chỗ</li><li><b>Đoạn 2</b> (x = 972–1.069 cm, dài 97,0 cm): 4 tầng AN3 đứng (48,5 dọc cont, 5 thùng × 42 ngang) + 1 tầng SLIM3 nằm trên cùng. Cao 262,5 cm · 5 SLIM3 + 40 AN3 chỗ</li><li><b>Đoạn 3</b> (x = 1.069–1.197 cm, dài 128,0 cm): 6 tầng SLIM3 nằm. Cao 243,0 cm · 42 SLIM3 + 0 AN3 chỗ</li></ul>
 </div></div></div>
 <div class="card"><h2>Số lượng theo mã</h2><div class="tbl"><table><thead><tr><th>Mã</th><th>Mô tả</th><th>Thùng D×R×C (cm)</th><th>Chiều đặt</th><th>Đặt hàng</th><th>Đóng được</th><th>Dư</th><th>CBM đóng</th></tr></thead><tbody><tr><td>3180932</td><td>SLIM3 30 RS ID</td><td>85,7×40,5×40,5</td><td>Chỉ nằm</td><td>363</td><td><b>342</b></td><td class='bad'><b>21</b></td><td>48,07</td></tr><tr><td>4012084</td><td>AN3 30 R 350 MT ID</td><td>48,5×42,0×55,5</td><td>Chỉ đứng</td><td>40</td><td><b>40</b></td><td class='ok'><b>0</b></td><td>4,52</td></tr><tr><td>4012081</td><td>AN3 30 R 350 ID</td><td>48,5×42,0×55,5</td><td>Chỉ đứng</td><td>110</td><td><b>100</b></td><td class='bad'><b>10</b></td><td>11,31</td></tr><tr><td></td><td><b>Tổng</b></td><td></td><td></td><td><b>513</b></td><td><b>482</b></td><td class='bad'><b>31</b></td><td><b>63,90</b></td></tr></tbody></table></div></div>
 <div class="card"><h2>Lưu ý an toàn & cách đóng</h2><ul class="tight"><li><b>SLIM3 nằm</b> mỗi tầng: 2 thùng nằm NGANG cont (2 × 85,7 = 171,4 cm) + 1 làn nằm DỌC cont (40,5 cm) → rộng 211,9 cm, khít hơn xếp 5 làn dọc (202,5 cm).</li><li><b>AN3 luôn đứng</b> (55,5 cao, đúng mũi tên). Tầng AN3 đặt trên mặt phẳng SLIM3 phải phủ kín, lót 1 tấm carton/ván ép giữa 2 lớp để chia tải.</li><li>Khe ngang còn ~9–10 cm mỗi bên vách (cont rộng 230, khối hàng 210–212): <b>chèn túi khí hoặc carton gấp</b> để hàng không xô ngang khi cẩu/vận chuyển.</li><li><b>Đoạn sát cửa chỉ cao 243,0 cm</b> (≤ 255) vì lỗ cửa 40HC chỉ cao ~258 cm, không đưa thùng lên tầng trên cùng ở hàng cuối được. Đoạn cao 258–262,5 cm nằm sâu bên trong, xếp từ trong ra.</li><li>Mặt cửa: chèn túi khí/thanh chống trước khi đóng cửa; đây là chỗ hay đổ hàng khi mở cont ở kho nhận.</li><li>Thứ tự đóng: từ vách đầu cont ra cửa, xong từng đoạn đủ chiều cao rồi mới tiến ra. AN3 MT (40 thùng) xếp trước, sâu trong cont.</li><li><b>Chưa kiểm tra tải trọng</b> (chưa có kg/thùng). Cont 40HC chở ~26,5 tấn: 482 thùng chỉ quá tải nếu trung bình > 55 kg/thùng, gần như không xảy ra với máy nước nóng 30L.</li></ul></div>
@@ -80,13 +82,58 @@ function label(t,c){const cv=document.createElement('canvas');cv.width=320;cv.he
  const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthTest:false}));sp.scale.set(1.4,0.28,1);return sp;}
 const l1=label('VÁCH ĐẦU CONT','#334155'); l1.position.set(0,H+0.35,W/2); scene.add(l1);
 const l2=label('CỬA CONT','#c0392b'); l2.position.set(L+0.2,H+0.35,W/2); scene.add(l2);
+// ---------- duong kich thuoc ----------
+const dims=new THREE.Group(); scene.add(dims);
+function tag(t,c,sc=1){const cv=document.createElement('canvas');const fs=40;const g0=cv.getContext('2d');g0.font=`bold ${fs}px system-ui`;
+ const w=Math.ceil(g0.measureText(t).width)+28;cv.width=w;cv.height=64;const g=cv.getContext('2d');
+ g.fillStyle='rgba(255,255,255,0.92)';g.strokeStyle=c;g.lineWidth=4;g.beginPath();g.roundRect(2,2,w-4,60,12);g.fill();g.stroke();
+ g.font=`bold ${fs}px system-ui`;g.fillStyle=c;g.textAlign='center';g.textBaseline='middle';g.fillText(t,w/2,33);
+ const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthTest:false}));
+ sp.renderOrder=20;const h=0.30*sc;sp.scale.set(h*w/64,h,1);return sp;}
+function dim(a,b,ext,t,c){ // a,b: Vector3 (m); ext: Vector3 huong keo duong gong
+ const m=new THREE.LineBasicMaterial({color:c,depthTest:false,transparent:true});
+ const A=a.clone().add(ext),B=b.clone().add(ext);
+ const pts=[A,B, a,A.clone().add(ext.clone().multiplyScalar(0.25)), b,B.clone().add(ext.clone().multiplyScalar(0.25))];
+ const ln=new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts),m); ln.renderOrder=19; dims.add(ln);
+ const dir=B.clone().sub(A).normalize(); const tk=0.05;
+ for(const P of [A,B]){const q=[P.clone().addScaledVector(dir,tk).addScaledVector(ext.clone().normalize(),tk),P.clone().addScaledVector(dir,-tk).addScaledVector(ext.clone().normalize(),-tk)];
+  const t2=new THREE.Line(new THREE.BufferGeometry().setFromPoints(q),m);t2.renderOrder=19;dims.add(t2);}
+ const sp=tag(t,'#'+c.toString(16).padStart(6,'0')); sp.position.copy(A.clone().add(B).multiplyScalar(0.5)).add(ext.clone().normalize().multiplyScalar(0.2)); dims.add(sp);}
+const V=(x,z,y)=>new THREE.Vector3(x*S,z*S,y*S); // cm (x doc, z cao, y ngang) -> world
+const RED=0xc0392b, BLU=0x0f5e9c, GRY=0x475569;
+const segW=g=>Math.max(g.nS?211.9:0, g.nA?(g.o==='a'?210:194):0);
+const yMin=Math.min(...R.boxes.map(b=>b.y)), yMax=Math.max(...R.boxes.map(b=>b.y+b.dy));
+// lot long cont (xam)
+dim(V(0,C.H,0),V(C.L,C.H,0),new THREE.Vector3(0,0.35,-0.25),`Dài lọt lòng ${fmt(C.L)} cm`,GRY);
+dim(V(C.L,C.H,0),V(C.L,C.H,C.W),new THREE.Vector3(0.35,0.35,0),`Rộng lọt lòng ${fmt(C.W)} cm`,GRY);
+dim(V(0,0,C.W),V(0,C.H,C.W),new THREE.Vector3(-0.35,0,0.35),`Cao lọt lòng ${fmt(C.H)} cm`,GRY);
+// khoi hang (do)
+dim(V(0,0,C.W),V(R.load_len,0,C.W),new THREE.Vector3(0,0,0.85),`Dài khối hàng ${fmt(R.load_len,1)} cm`,RED);
+dim(V(R.load_len,0,yMin),V(R.load_len,0,yMax),new THREE.Vector3(0.6,0,0),`Rộng hàng ${fmt(yMax-yMin,1)} cm`,RED);
+dim(V(R.load_len,0,C.W),V(C.L,0,C.W),new THREE.Vector3(0,0,1.25),`Trống cửa ${fmt(C.L-R.load_len,1)} cm`,GRY);
+// tung doan (xanh): dai + cao
+R.segs.forEach(g=>{
+ dim(V(g.x0,0,C.W),V(g.x0+g.X,0,C.W),new THREE.Vector3(0,0,0.42),`Đoạn ${g.seg}: ${fmt(g.X,1)} cm`,BLU);
+ const xm=g.x0+Math.min(g.X/2, 60);
+ dim(V(g.x0+g.X,0,C.W),V(g.x0+g.X,g.height,C.W),new THREE.Vector3(0,0,0.2),`Cao ${fmt(g.height,1)} cm`,BLU);
+});
+// khe 2 ben vach
+dim(V(R.load_len,R.max_h*0.55,0),V(R.load_len,R.max_h*0.55,yMin),new THREE.Vector3(0.35,0,-0.2),`Khe vách ${fmt(yMin,1)} cm`,GRY);
+// kich thuoc thung mau (gan nhan len 1 thung moi ma)
+for(const [k,nm] of [['3180932','SLIM3'],['4012084','AN3 MT'],['4012081','AN3']]){
+ const cand=R.boxes.filter(b=>b.sku===k); if(!cand.length) continue;
+ const b=cand.reduce((p,q)=>((q.z+q.dz)*10+q.y > (p.z+p.dz)*10+p.y ? q : p)); // thung cao nhat, gan phia truoc
+ const sp=tag(`${nm}: ${fmt(b.dx,1)}×${fmt(b.dy,1)}×${fmt(b.dz,1)}`,'#'+COL[k].toString(16).padStart(6,'0'),0.9);
+ const top=V(b.x+b.dx/2,b.z+b.dz,b.y+b.dy/2); sp.position.copy(top).add(new THREE.Vector3(0,0.45,0)); dims.add(sp);
+ const ld=new THREE.Line(new THREE.BufferGeometry().setFromPoints([top,top.clone().add(new THREE.Vector3(0,0.38,0))]),new THREE.LineBasicMaterial({color:COL[k],depthTest:false})); ld.renderOrder=19; dims.add(ld);}
+document.getElementById('dimToggle').onchange=e=>{dims.visible=e.target.checked;};
 const bx=[...R.boxes].sort((a,b)=>(Math.floor(a.x/45)-Math.floor(b.x/45))||(a.z-b.z)||(a.y-b.y));
 const meshes=bx.map(b=>{const g=new THREE.BoxGeometry(b.dx*S,b.dz*S,b.dy*S);const m=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:COL[b.sku],roughness:0.8}));
  m.position.set((b.x+b.dx/2)*S,(b.z+b.dz/2)*S,(b.y+b.dy/2)*S); m.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:0x222222,transparent:true,opacity:0.4}))); m.userData.k=b.sku; scene.add(m); return m;});
 const vis={'3180932':true,'4012084':true,'4012081':true}, stepR=document.getElementById('stepR'); stepR.max=meshes.length; stepR.value=meshes.length;
 function apply(){const n=+stepR.value;meshes.forEach((m,i)=>m.visible=vis[m.userData.k]&&i<n);const c={};meshes.slice(0,n).forEach(m=>c[m.userData.k]=(c[m.userData.k]||0)+1);
  document.getElementById('stepT').textContent=`${n}/${meshes.length} thùng · SLIM3 ${c['3180932']||0} · AN3 MT ${c['4012084']||0} · AN3 ${c['4012081']||0}`;}
-stepR.oninput=apply; document.querySelectorAll('.legend input').forEach(i=>i.onchange=()=>{vis[i.dataset.k]=i.checked;apply();});
+stepR.oninput=apply; document.querySelectorAll('.legend input[data-k]').forEach(i=>i.onchange=()=>{vis[i.dataset.k]=i.checked;apply();});
 let timer=null; document.getElementById('play').onclick=()=>{if(timer){clearInterval(timer);timer=null;return;}stepR.value=0;apply();timer=setInterval(()=>{stepR.value=+stepR.value+3;apply();if(+stepR.value>=meshes.length){clearInterval(timer);timer=null;}},40);};
 function resize(){const w=view.clientWidth,h=view.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
 function setView(v){const c=new THREE.Vector3(L/2,H/2.5,W/2);let d=(Math.sqrt(L*L+W*W+H*H)/2+0.5)/Math.sin(THREE.MathUtils.degToRad(camera.fov/2));if(camera.aspect<1)d/=camera.aspect;d*=0.8;
